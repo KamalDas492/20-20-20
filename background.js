@@ -11,7 +11,7 @@ function Do_it(time){
     function every_time(){
         var time_now = time_cal();
         var diff = time_now-time;
-        if(diff==1){
+        if(diff==20){
             var audio = new Audio('time-alarm.mp3');
             audio.play();
            chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
@@ -22,7 +22,7 @@ function Do_it(time){
         });
         }
         console.log(diff);
-        if(diff==1){
+        if(diff==20){
             clearInterval(myvar);
         }
     }
